@@ -13,6 +13,8 @@ import sconto from'./images/sconto.jpeg';
 import int from'./images/intrainz.jpeg';
 import winni from'./images/winni.png';
 import kolkata from'./images/kolkata.png';
+import kwik from'./images/kwik.png';
+import vip from'./images/vip.png';
 import './index.css';
 
 
@@ -62,10 +64,22 @@ const teamMembers = [
     image: kebab,
   },
   {
+    name: 'The Beverage Movement',
+    role: 'The Beverage Partner',
+    bio: 'We Serve the best',
+    image: vip,
+  },
+  {
     name: 'Winni',
     role: 'Celebrtation Partner',
     bio: 'Celebrate Relations',
     image: winni,
+  },
+  {
+    name: 'Kwikpic',
+    role: 'Photo Sharing  Partner',
+    bio: 'AI based photo sharing App',
+    image: kwik,
   },
   {
     name: 'Rapido ',
