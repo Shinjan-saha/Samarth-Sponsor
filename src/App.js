@@ -15,6 +15,7 @@ import winni from'./images/winni.png';
 import kolkata from'./images/kolkata.png';
 import kwik from'./images/kwik.png';
 import vip from'./images/vip.png';
+import game from'./images/game.png';
 import './index.css';
 
 
@@ -56,6 +57,12 @@ const teamMembers = [
     role: 'Eductation  Partner',
     bio: 'Igniting a brighter future',
     image: int,
+  },
+  {
+    name: 'Virtulaism',
+    role: 'Gaming  Partner',
+    bio: 'Igniting a Gaming  future',
+    image: game,
   },
   {
     name: 'MOJS',
