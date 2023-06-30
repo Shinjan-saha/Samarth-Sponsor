@@ -1,80 +1,11 @@
-.team-member:hover {
-  transform: translateY(-10px);
-  border: 1px solid orange;
+body {
+  /* background-color: rgb(105, 39, 105); */
+  background-image: url('images/bg21.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.team-page {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 3rem;
-}
-
-.team-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  transition: transform 0.2s ease-in-out;
-}
-
-.team-member:hover {
-  transform: translateY(-10px);
-  border: 3px solid orange; 
-}
-
-.team-member img {
-  width: 150px;
-  height:150px;
-  /* border-radius: 50%; */
-  object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-}
-
-.team-member h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: rgb(226, 7, 7);
-  text-transform: uppercase;
-}
-
-.team-member p {
-  font-size: 1rem;
-  text-align: center;
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  color: #777;
-}
-
-@media only screen and (max-width: 768px) {
-  .team-member {
-    margin: 1rem;
-    padding: 1rem;
-  }
-  
-  .team-member img {
-    width: 200px; /* adjust to match the width of your rectangle */
-    height: 150px; /* adjust to match the height of your rectangle */
-  }
-  
-  .team-member h2 {
-    font-size: 1.25rem;
-  }
-  
-  .team-member p {
-    font-size: 0.9rem;
-  }
-}
-
-
-.centered {
-  text-align: center;
-}
 .team-page {
   text-align: center;
 }
@@ -89,18 +20,65 @@
 .team-member {
   width: 300px;
   text-align: left;
+  background-color: rgba(207, 198, 207, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.team-member-image {
+.team-member:hover {
+  transform: translateY(-10px);
+  border: 3px solid rgb(245, 4, 225);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-member img {
   width: 100%;
   height: auto;
-  width: 200px; 
-  height: 150px; 
-  box-shadow: 0px 0px 10px rgba(255, 48, 48, 0.2);
-
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.header h1 {
+  color: #faf5fa; /* Set the light color you desire */
+  text-decoration: underline;
+}
+.team-member h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(19, 141, 146);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
 
+.team-member p {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #f7efef;
+}
 
-
-
+@media only screen and (max-width: 768px) {
+  .team-member {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .team-member img {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .team-member h2 {
+    font-size: 1.25rem;
+  }
+  
+  .team-member p {
+    font-size: 0.9rem;
+  }
+}
