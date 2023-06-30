@@ -1,53 +1,113 @@
 body {
-  /* background-color: rgb(105, 39, 105); */
-  background-image: url('images/bg21.jpg');
+  /* background-image: url('images/bg21.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background: linear-gradient(45deg, #4a148c, #670394, #67226b, #49183f, #4e0731, #500538, #810272, #420531, #4f0156, #470746, #230118, #2e0018);
 }
 
-.team-page {
+.app {
   text-align: center;
+  padding: 20px;
+  color: #faf5fa; /* Set the light color you desire */
 }
 
-.team-members {
+.header {
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  text-decoration: underline;
+}
+
+.carousel-container {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
 }
 
-.team-member {
-  width: 300px;
-  text-align: left;
+.carousel {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.2)
+  );
+  transform: rotate(45deg);
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+.card:hover:before {
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+.card {
+  /* flex: 0 0 100%; */
+  /* flex: 0 0 20.33%;  */
+  /* flex: 0 0 calc(100% / 3);  */
+  flex: 0 0 200px;
+  min-width: 300px;
+  margin: 0 10px;
   background-color: rgba(207, 198, 207, 0.2);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   padding: 1rem;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+
+  /* background-color: rgba(207, 198, 207, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 150px; 
+  max-height: 300px;
+  overflow: auto; */
+ 
 }
 
-.team-member:hover {
-  transform: translateY(-10px);
-  border: 3px solid rgb(245, 4, 225);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.team-member img {
+.card-image {
+  /* width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
   width: 100%;
   height: auto;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
 }
 
-.header h1 {
-  color: #faf5fa; /* Set the light color you desire */
-  text-decoration: underline;
+.card-content {
+  text-align: center;
 }
-.team-member h2 {
+
+.card h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
   color: rgb(19, 141, 146);
@@ -55,7 +115,7 @@ body {
   text-decoration: underline;
 }
 
-.team-member p {
+.card p {
   font-size: 1rem;
   text-align: center;
   line-height: 1.5;
@@ -63,22 +123,36 @@ body {
   color: #f7efef;
 }
 
-@media only screen and (max-width: 768px) {
-  .team-member {
-    margin: 1rem;
-    padding: 1rem;
-  }
-  
-  .team-member img {
-    width: 200px;
-    height: 150px;
-  }
-  
-  .team-member h2 {
-    font-size: 1.25rem;
-  }
-  
-  .team-member p {
-    font-size: 0.9rem;
-  }
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(19, 141, 146, 0.8);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
 }
+
+.carousel-button.prev {
+  left: 20px;
+}
+
+.carousel-button.next {
+  right: 20px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.3, 0, 0.5, 1);
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f5f5f5; /* Adjusted transition */
+}
+ 
+ 
+ 
+  /* Adjusted transition */
